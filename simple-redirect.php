@@ -19,15 +19,13 @@ class GosSimpleRedirect
 
 		function __construct()
 		{
-			add_action('init', function()
-			{
-				$this->postTypes = get_post_types();
-				$this->register_hooks();
-			});
+			add_action('init', array($this, 'register_hooks'));
 		}
 
 		function register_hooks()
 		{
+			$this->postTypes = get_post_types();
+
 			add_action( 'load-post.php', array($this,'load_post') );
 			add_action( 'load-post-new.php', array($this,'load_post') );
 
