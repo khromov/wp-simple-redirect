@@ -5,6 +5,11 @@ Requires at least: 2.5
 Tested up to: 3.9.2
 Stable tag: /trunk/
 
+Note
+======
+This is a fork of the official plugin at: https://wordpress.org/plugins/simple-redirect/
+The aim of this fork is to make the plugin work properly, as the WP.org version is currently broken.
+
 Easily redirect any post or page to another page with a dropdown menu or by manually typing in a URL. Check out the screenshots. This plugin also changes permalinks and menus to point directly to the new location of the redirect - this prevents bots from getting a redirect and helps boost your SEO.
 
 == Description ==
