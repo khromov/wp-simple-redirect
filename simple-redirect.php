@@ -1,19 +1,16 @@
 <?php
 /*
  * Plugin Name: Simple Redirect
- * Version: 3.0.1
+ * Version: 3.0.2
  * Description: Easily redirect any post or page to another page with a dropdown menu or by manually typing in a URL. This plugin also changes permalinks and menus to point directly to the new location of the redirect - this prevents bots from getting a redirect and helps boost your SEO.
- * Author: Get on Social
+ * Author: Get on Social, khromov
  * Author URI: http://www.getonsocial.com/?simpleredirect
  * License: GPL v3
 
 */
 
-
 class GosSimpleRedirect
 {
-
-
 		var $namespace = 'gos_simple_redirect';
 		var $title = 'Simple Redirect';
 		var $postTypes = array();
@@ -22,8 +19,15 @@ class GosSimpleRedirect
 
 		function __construct()
 		{
+			add_action('init', function()
+			{
+				$this->postTypes = get_post_types();
+				$this->register_hooks();
+			});
+		}
 
-			$this->postTypes = get_post_types();
+		function register_hooks()
+		{
 			add_action( 'load-post.php', array($this,'load_post') );
 			add_action( 'load-post-new.php', array($this,'load_post') );
 
@@ -39,8 +43,6 @@ class GosSimpleRedirect
 			add_filter('post_type_link',array($this,'post_link'),20,2);
 
 			add_filter('wp_nav_menu_objects',array($this,'wp_nav_menu_objects'));
-
-
 		}
 
 
@@ -162,9 +164,9 @@ class GosSimpleRedirect
 
 		function add_meta_boxes()
 		{
-
 			foreach($this->postTypes as $postType)
 			{
+
 				add_meta_box(
 					$this->namespace,
 					$this->title,
@@ -438,7 +440,5 @@ class GosSimpleRedirect
 
 }
 
-
 global $gosSimpleRedirect;
 $gosSimpleRedirect = new GosSimpleRedirect();
-
