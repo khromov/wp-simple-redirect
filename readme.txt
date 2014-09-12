@@ -1,9 +1,9 @@
-=== Simple Redirect ===
-Contributors: Get on Social
+=== Simple Redirect Redux ===
+Contributors: Get on Social, khromov
 Tags: redirect, headers, posts, redirection, simple, easy, SEO, 301
 Requires at least: 2.5
-Tested up to: 3.9.2
-Stable tag: /trunk/
+Tested up to: 4.0
+Stable tag: 1.0
 
 Note
 ======
