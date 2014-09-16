@@ -1,4 +1,4 @@
-=== Simple Redirect Redux ===
+=== Simple Redirect Light ===
 Contributors: Get on Social, khromov
 Tags: redirect, headers, posts, redirection, simple, easy, SEO, 301
 Requires at least: 2.5
@@ -8,7 +8,8 @@ Stable tag: 1.0
 Note
 ======
 This is a fork of the official plugin at: https://wordpress.org/plugins/simple-redirect/
-The aim of this fork is to make the plugin work properly, as the WP.org version is currently broken.
+This plugin uses a slightly less performance-intensive approach. The downside is that you may be forced to perform
+an additional redirect in certain cases.
 
 Easily redirect any post or page to another page with a dropdown menu or by manually typing in a URL. Check out the screenshots. This plugin also changes permalinks and menus to point directly to the new location of the redirect - this prevents bots from getting a redirect and helps boost your SEO.
 
